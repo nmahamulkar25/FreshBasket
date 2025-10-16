@@ -1,0 +1,22 @@
+<div class="cart-page">
+    <div class="container mt-5">
+        <h2 class="text-center mb-5">🛒 Your Cart</h2>
+
+        <div class="row justify-content-center" *ngIf="cartItems.length > 0">
+            <div class="col-md-3 mb-4" *ngFor="let item of cartItems; let i = index">
+                <div class="card">
+                    <img [src]="item.imageurl" class="card-img-top" alt="{{ item.productname }}">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">{{ item.productname }}</h5>
+                        <h6 class="fw-bold">₹{{ item.price }}</h6>
+                        <button class="btn btn-danger btn-sm" (click)="removeItem(i)">Remove</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button style="align-items: center;" (click)="onClick()">Confirm Order</button>
+        <div *ngIf="cartItems.length === 0" class="text-center mt-5">
+            <h5>Your cart is empty 🛍</h5>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,24 @@
+/* 🟢 Keeps footer down */
+.cart-page {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 50px; /* 🆕 Added space so heading doesn't stick to navbar */
+}
+
+/* 🟢 Optional: add a little breathing space at bottom so content doesn't stick to footer */
+.cart-page .container {
+  padding-bottom: 40px;
+}
+
+/* Existing card styles */
+.card {
+  border-radius: 2px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+  height: 200px;
+  object-fit: cover;
+}

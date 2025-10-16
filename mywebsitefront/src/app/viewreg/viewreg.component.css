@@ -1,0 +1,7 @@
+.viewreg-page {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 50px; /* 🆕 Added space so heading doesn't stick to navbar */
+}

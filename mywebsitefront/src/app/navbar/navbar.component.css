@@ -1,0 +1,42 @@
+ .navbar-custom {
+            background-color: #6BA44E;
+            /* Green color same as logo bg */
+        }
+
+        .navbar-brand img {
+            height: 50px;
+            margin-right: 10px;
+        }
+
+        .search-bar {
+            display: flex;
+            align-items: center;
+            background: white;
+            border-radius: 25px;
+            padding: 5px 12px;
+            width: 220px;
+            margin-left: 20px;
+        }
+
+        .search-bar i {
+            color: gray;
+            margin-right: 8px;
+            font-size: 14px;
+        }
+
+        .search-bar input {
+            border: none;
+            outline: none;
+            font-size: 14px;
+            flex: 1;
+        }
+
+        /* ✅ Navbar link hover effect */
+        .navbar-nav .nav-link {
+            transition: color 0.3s ease;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #0b0b0b !important;
+            /* Golden Yellow hover */
+        }

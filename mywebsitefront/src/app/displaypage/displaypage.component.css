@@ -1,0 +1,10 @@
+body {
+  padding-top: 250px; /* ensures all pages content is below fixed navbar */
+}
+
+h1.text-center {
+  margin-bottom: 40px; /* adds space below the heading */
+}
+.card {
+  margin-bottom: 30px; /* space between rows */
+}
