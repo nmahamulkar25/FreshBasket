@@ -1,0 +1,96 @@
+.image-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+ 
+}
+
+.image-box img {
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.image-box img:hover {
+  transform: scale(1.05);
+}
+
+/* Scrollbar style for horizontal product lists */
+.d-flex.overflow-auto {
+  scrollbar-width: thin;
+  scrollbar-color: #ccc transparent;
+}
+
+.d-flex.overflow-auto::-webkit-scrollbar {
+  height: 8px;
+}
+
+.d-flex.overflow-auto::-webkit-scrollbar-thumb {
+  background-color: #bbb;
+  border-radius: 10px;
+}
+a.text-success:hover {
+  text-decoration: underline;
+}
+
+.d-flex.overflow-auto {
+  scrollbar-width: thin;
+  scrollbar-color: #ccc transparent;
+}
+
+.d-flex.overflow-auto::-webkit-scrollbar {
+  height: 8px;
+}
+
+.d-flex.overflow-auto::-webkit-scrollbar-thumb {
+  background-color: #bbb;
+  border-radius: 10px;
+}
+
+/* Each category block */
+.category-section {
+  background-color: #f6fff6; /* faint green background */
+  border: 1px solid #e0f3e0;
+  border-radius: 15px;
+  padding: 20px;
+  margin: 40px 0; /* creates white space between categories */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Subtle lift on hover */
+.category-section:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Horizontal scrolling area */
+.category-section .d-flex.overflow-auto {
+  scroll-behavior: smooth;
+}
+
+.category-section .d-flex.overflow-auto::-webkit-scrollbar {
+  height: 6px;
+}
+
+.category-section .d-flex.overflow-auto::-webkit-scrollbar-thumb {
+  background-color: #439043;
+  border-radius: 10px;
+}
+
+/* Category header styles */
+.category-section h3 {
+  color: #2e7d32;
+  font-size: 1.4rem;
+}
+
+.category-section a {
+  cursor: pointer;
+  color: #388e3c;
+  font-weight: 500;
+}
+
+.category-section a:hover {
+  text-decoration: underline;
+  color: #2e7d32;
+}
