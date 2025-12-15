@@ -3,22 +3,49 @@
   <h1 class="text-center" *ngIf="parr.length > 0">
     {{ parr[0].category }}
   </h1>
-<div class="row justify-content-evenly" >
-    
-<div *ngFor="let p of parr"  class="card" style="width: 18rem;">
-    
-  <img src="{{p.imageurl}}" class="card-img-top" alt="Product Image">
-    <div class="card-body text-center">
-        
-    <h5 class="card-title">{{p.productname}}</h5>
-        <p class="card-text">{{p.description}}</p>
+  <div class="row justify-content-evenly">
+    <div
+      *ngFor="let p of parr"
+      class="card"
+      style="width: 18rem; cursor: pointer;"
+      (click)="openProduct(p)"
+    >
+      <img [src]="p.imageurl" class="card-img-top" alt="Product Image" />
+      <div class="card-body text-center">
+        <h5 class="card-title">{{ p.productname }}</h5>
+        <p class="card-text">{{ p.description }}</p>
         <div class="d-flex justify-content-between align-items-center">
-        <span class="fw-bold">₹{{p.price}}</span>
-<button class="btn btn-success btn-sm" *ngIf="cemail != null" (click)="viewcart(p)">
-  Add
-</button>  
+          <span class="fw-bold">₹{{ p.price }}</span>
+          <button
+            class="btn btn-success btn-sm"
+            *ngIf="cemail != null"
+            (click)="viewcart(p); $event.stopPropagation()"
+          >
+            Add
+          </button>
+        </div>
+      </div>
+    </div>
   </div>
+  <div
+    class="product-modal"
+    *ngIf="selectedProduct"
+    (click)="closeProduct()"
+  >
+    <div
+      class="product-modal-content"
+      (click)="$event.stopPropagation()"
+    >
+      <button class="close-btn" (click)="closeProduct()">×</button>
+      <img
+        [src]="selectedProduct.imageurl"
+        alt="Product Image"
+        class="modal-image"
+      />
+      <h2>{{ selectedProduct.productname }}</h2>
+      <p>{{ selectedProduct.description }}</p>
+      <h4>Price: ₹{{ selectedProduct.price }}</h4>
+      <button *ngIf="cemail != null" class="btn btn-success">Buy Now</button>
+    </div>
   </div>
-</div>
-</div>
 </div>

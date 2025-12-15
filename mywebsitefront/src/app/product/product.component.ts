@@ -24,8 +24,8 @@ export class ProductComponent {
   this.pro.price = Number(this.pro.price);
   console.log('Submitting product:', this.pro);
   this.cs.addProduct(this.pro).subscribe({
-    next: data => alert('Product Added Successfully'),
-    error: err => console.error(err)
-  });
+    next: (data: any) => alert('Product Added Successfully'),
+error: (err: any) => console.error(err)
+});
 }
 }

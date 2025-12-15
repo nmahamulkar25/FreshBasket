@@ -32,13 +32,13 @@ export class HomeComponent implements OnInit {
   // ✅ Fetch all products and group by category
   loadProducts(): void {
     this.ps.getAllProducts().subscribe({
-      next: (data) => {
+      next: (data: any) => {
         if (data && data.length > 0) {
           this.parr = data;
           this.groupProductsByCategory();
         }
       },
-      error: (err) => console.error('Error loading products:', err)
+      error: (err: any) => console.error('Error loading products:', err)
     });
   }
 

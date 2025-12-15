@@ -11,14 +11,16 @@ import { CommonModule } from '@angular/common';
   styleUrl: './viewreg.component.css'
 })
 export class ViewregComponent {
-rarr:Register[]=[]
-constructor(private rs:RegisterService){}
-ngOnInit():void{
-  this.rs.getallemps().subscribe(data=>
-  {
-    if(data.length>0)
-      this.rarr=data
+
+  rarr: Register[] = [];
+
+  constructor(private rs: RegisterService) {}
+
+  ngOnInit(): void {
+    this.rs.getallemps().subscribe((data: any) => {
+      if (data.length > 0) {
+        this.rarr = data;
+      }
+    });
   }
-  )
-}
 }

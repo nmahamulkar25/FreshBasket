@@ -17,7 +17,7 @@ export class LoginComponent {
   constructor(private rs: RegisterService, private router: Router) { }
 
   submitdata() {
-    this.rs.login(this.reg.email, this.reg.password).subscribe(data => {
+    this.rs.login(this.reg.email, this.reg.password).subscribe((data: any) => {
       if (data.length > 0) {
         alert("Login Successful");
         localStorage.setItem("cemail", this.reg.email);

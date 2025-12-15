@@ -17,7 +17,7 @@ export class RegisterComponent {
   constructor(private rs: RegisterService) {}
 
   submitdata() {
-    this.rs.addem(this.reg).subscribe((data) => {
+    this.rs.addem(this.reg).subscribe((data: any) => {
       if (data != null) {
         alert('Registration Successful');
       }

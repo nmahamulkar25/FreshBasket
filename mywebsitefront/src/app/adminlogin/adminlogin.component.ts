@@ -16,7 +16,7 @@ export class AdminLoginComponent {
 adm:Adminlogin=new Adminlogin()
 constructor(private ads:AdminloginService,private router:Router){}
 submitdata() {
-    this.ads.login(this.adm.email, this.adm.password).subscribe(data => {
+    this.ads.login(this.adm.email, this.adm.password).subscribe((data: any) => {
       if (data.length > 0) {
         alert("Login Successful");
         localStorage.setItem("aemail", this.adm.email);

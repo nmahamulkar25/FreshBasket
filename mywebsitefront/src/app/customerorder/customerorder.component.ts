@@ -1,14 +1,14 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { ActivatedRoute, Router, RouterLink } from '@angular/router';
+import { ActivatedRoute, Router} from '@angular/router';
 import { Product } from '../model/product';
 import { ProductService } from '../services/product.service';
 
 @Component({
   selector: 'app-customerorder',
   standalone: true,
-  imports: [CommonModule, FormsModule,RouterLink],
+  imports: [CommonModule, FormsModule],
   templateUrl: './customerorder.component.html',
   styleUrls: ['./customerorder.component.css']
 })
@@ -18,7 +18,7 @@ export class CustomerOrderComponent {
   constructor(private rs:ProductService,private router: Router){}
   ngOnInit():void{
      this.loadProducts();
-    this.rs.getAllProducts().subscribe(data=>
+    this.rs.getAllProducts().subscribe((data: any)=>
     {
       if(data.length>0)
         this.parr=data
@@ -26,7 +26,7 @@ export class CustomerOrderComponent {
     )
   }
   loadProducts(): void {
-    this.rs.getAllProducts().subscribe(data => {
+    this.rs.getAllProducts().subscribe((data: any) => {
       this.parr = data;
     });
   }
