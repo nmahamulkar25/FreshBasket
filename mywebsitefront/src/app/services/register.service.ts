@@ -32,4 +32,6 @@ export class RegisterService {
   searchbyemail(em: any): Observable<Register> {
     return this.http.get<Register>(url + "/registers/" + em)
   }
+  
+
 }
